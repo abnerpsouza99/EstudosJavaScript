@@ -1,2 +1,2 @@
 # Curso-Javascript
-Repositório códigos do curso Web Javascript
+Repositório para códigos do curso Web Javascript
