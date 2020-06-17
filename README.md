@@ -1,2 +1,2 @@
-# Curso-Javascript
-Repositório para códigos do curso Web Javascript
+# Estudos JavaScript
+Repositório destinado aos códigos e exercícios de fixação da linguagem.
