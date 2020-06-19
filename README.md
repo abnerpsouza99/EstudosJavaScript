@@ -1,2 +1,2 @@
-# Estudos JavaScript
-Repositório destinado aos códigos e exercícios de fixação da linguagem.
+# JavaScript Studies
+This repository is destinated for pratices and exercises of JavaScript.
