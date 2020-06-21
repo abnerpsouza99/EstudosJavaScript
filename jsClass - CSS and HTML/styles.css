@@ -1,0 +1,100 @@
+/* For import the CSS styles */
+@import "https://fonts.googleapis.com/css2?family=Poppins&display=swap";
+
+:root {
+    /* To create a variable */
+    --color-green: #50fa7b;
+}
+
+/* Remove the agent stylesheet of navegator */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    background: #282a36;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+header{
+    padding: 32px;
+    border-bottom: 1px solid #333;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+header div {
+    text-align: center;
+}
+
+.links {
+    text-align: center;
+}
+
+.links a {
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 15px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.links a:hover {
+    color: var(--color-green);
+    transition: color 400ms;
+}
+
+#wrapper {
+    text-align: center;
+    padding: 30px;
+}
+
+#wrapper img {
+    border-radius: 50%; /* For circle */
+    border: 5px solid var(--color-green);
+    margin-bottom: 30px;
+    height: 300px;
+}
+
+#wrapper h1 {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+#wrapper h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+#wrapper h2 a{
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 10px;
+    opacity: 0.8;
+    color: var(--color-green);
+}
+
+#wrapper p {
+    font-size: 25px;
+    font-weight: bold;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+#wrapper a {
+    text-decoration: none;
+    color: white;
+}
+
+#links-footer a {
+    border-bottom: 1px solid var(--color-green);
+}
+
+
+
