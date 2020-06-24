@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<!-- The tag title in head modify the name of page in the navegator -->
+<title>Contents</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock title %}
+
+{% block content %}
+<div id="wrapper">
+    <h1>Contents</h1>
+
+</div>
+
+<section class="cardsContents">
+
+    <div class="cardContent" id="starter">
+        <div class="card-img-container">
+            <img src="https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg" alt="">
+        </div>
+        <div class="card-content-description">
+            <p>Starter</p>
+        </div>
+        <div class="cardContent-info">
+            <p>5 módulos</p>
+            <p class="cardContent-price">FREE</p>
+        </div>
+    </div>
+
+    <div class="cardContent" id="launchbase">
+        <div class="card-img-container">
+            <img src="https://skylab.rocketseat.com.br/static/0828532024cb46921a6b5e941f8d788d.svg" alt="">
+        </div>
+        <div class="card-content-description">
+            <p>LaunchBase</p>
+        </div>
+        <div class="cardContent-info">
+            <p>7 fases com diversos módulos</p>
+            <p class="cardContent-price">R$960,00</p>
+        </div>
+    </div>
+
+    <div class="cardContent" id="gostack">
+        <div class="card-img-container">
+            <img src="https://skylab.rocketseat.com.br/static/83a178a0653dab1d55e2ed7946465975.svg" alt="">
+        </div>
+        <div class="card-content-description">
+            <p>GoStack</p>
+        </div>
+        <div class="cardContent-info">
+            <p>10 min</p>
+            <p class="cardContent-price">FREE</p>
+        </div>
+    </div>
+
+</section>
+
+<div class="modal-overlay">
+    <div class="modal">
+        <div class="gridModalIcons">
+            <a class="close-modal">
+                <i class="material-icons">close</i>
+            </a>
+            <a class="maximize-modal">
+                <i class="material-icons">aspect_ratio</i>
+            </a>
+        </div>
+
+        <div class="modal-content">
+            <!-- We use the "iframe" to collect the extern content in our html -->
+            <iframe src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+</div>
+
+<script src="scripts.js"></script>
+
+{% endblock content %}

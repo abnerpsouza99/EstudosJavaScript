@@ -1,0 +1,353 @@
+/* For import the CSS styles */
+@import "https://fonts.googleapis.com/css2?family=Poppins&display=swap";
+
+:root {
+    /* To create a variable */
+    --color-green: #50fa7b;
+    --color-card: #7159c1;
+}
+
+/* Remove the agent stylesheet of navegator */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    background: #282a36;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+}
+
+
+.aboutRocketseat {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.aboutRocketseat:hover {
+    color: var(--color-green);
+    transition: color 400ms;
+}
+
+header{
+    padding: 32px;
+    border-bottom: 1px solid #333;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body header a img{
+    width: 20px;
+    height: 20px;
+}
+
+.links {
+    text-align: center;
+    
+}
+
+.links a {
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.links a:hover {
+    color: var(--color-green);
+    transition: color 400ms;
+}
+
+#wrapper {
+    margin: 30px 0;
+    text-align: center;
+}
+
+#box-cea {
+    display: flex;
+    flex: 1;
+}
+
+#tecnologies{
+    margin: 30px 30px;
+    padding-top: 10px;
+    border-radius: 10px;
+    border: 3px solid var(--color-green);
+}
+
+#tecnologiesList {
+    margin: 30px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Organiza as colunas por meio de cálculos do número de itens */
+}
+
+#tecnologiesList li{
+    list-style: none;
+}
+
+#tecnologiesList li img{
+    width: 160px;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid var(--color-green);
+}
+
+
+#img-cea {
+    border-radius: 10px;
+    margin: 30px;
+    max-width: 500px;
+}
+
+.ceaInfo {
+    margin: 30px 0;
+    display: inline;
+}
+
+.ceaInfo a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.ceaInfo a:hover {
+    color: var(--color-green);
+    transition: color 400ms;
+}
+
+.ceaInfo h1 {
+    margin: 30px 0;
+    height: 10px;
+}
+
+
+#wrapper img {
+    border-radius: 50%; /* For circle */
+    border: 5px solid var(--color-green);
+    margin-bottom: 30px;
+    height: 300px;
+}
+
+#wrapper h1 {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+#container{
+    text-align: center;
+    display: inline;
+}
+
+#container box-1{
+    text-align: center;
+}
+
+#wrapper h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+#wrapper h2 a{
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 10px;
+    opacity: 0.8;
+    color: var(--color-green);
+}
+
+#wrapper p {
+    font-size: 25px;
+    font-weight: bold;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+#wrapper a {
+    text-decoration: none;
+    color: white;
+}
+
+#links-footer{
+    margin-bottom: 30px;
+}
+
+#links-footer a {
+    border-bottom: 1px solid var(--color-green);
+}
+
+/* --- ANIMATION --- */
+
+.anime-top {
+    opacity: 0;
+    transform: translate3d(0,-200px,0);
+    transition: 3s;
+  }
+  
+  .anime-bottom {
+    opacity: 0;
+    transform: translate3d(0,200px,0);
+    transition: 3s;
+  }
+  
+  .anime-right {
+    opacity: 0;
+    transform: translate3d(200px,0,0);
+    transition: 2s;
+  }
+  
+  .anime-left {
+    opacity: 0;
+    transform: translate3d(-200px,0,0);
+    transition: 2s;
+  }
+  
+  .anime-start {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+
+/* ----- CARDS ----- */
+
+.cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--color-card);
+}
+
+.card-img-container img{
+    width: 100%;
+} 
+
+.card-content,
+.card-info {
+    padding: 25px;
+    margin-top: 10px;
+}
+
+.card-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-price {
+    background-color: var(--color-card);
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* ----- MODAL ----- */
+
+.modal-overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    position: relative;
+    margin: 5vh auto;
+}
+
+.modal.maximize {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+
+.modal .gridModalIcons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px
+}
+
+.modal .close-modal{
+    color: black;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.modal .maximize-modal{
+    color: black;
+    position: left;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+}
+
+.cardsContents {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.cardContent {
+    border: 1px solid var(--color-green);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.cardContent .card-content-description {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 40px;
+    border-bottom: 1px solid var(--color-green);
+}
+
+.cardContent-info {
+    margin-top: 20px;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.cardContent-info p {
+    text-align: left;
+}
+
+.cardContent-info .cardContent-price {
+    text-align: right;
+}
+
+
