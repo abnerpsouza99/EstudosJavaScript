@@ -318,6 +318,7 @@ iframe {
 .card {
     display: grid;
     align-items: center;
+    cursor: pointer;
 }
 
 .cardsContents {
@@ -372,4 +373,39 @@ h2 {
     margin-top: 30px;
 }
 
+/* ==== FEATURED ==== */
+
+.featured-wrapper.card-img-container {
+    position: relative;
+}
+.featured {
+    background: #f7d05f;
+    color: #111;
+    padding: 2px;
+    position: absolute;
+    right: 5px;
+    border-radius: 3px;
+    top: -12px;
+}
+
+/* === VIDEO PAGE === */
+
+.video {
+    margin: 0 auto;
+    max-width: 800px;
+    margin-bottom: 40px;
+
+}
+
+.card-video-container {
+    position: relative;
+    padding-top: 65%;
+}
+
+.card-video-container  iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
 

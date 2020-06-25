@@ -11,12 +11,13 @@ server.use(express.static('src/scripts'))
 
 server.set("view engine", "njk")
 
-nunjucks.configure("views", { 
+nunjucks.configure("views", {
     express: server,
-    autoescape: false 
+    autoescape: false,
+    noCache: true
 })
 
-server.get("/", function(req, res){
+server.get("/", function (req, res) {
     const about = {
         avatar_url: "https://avatars1.githubusercontent.com/u/63468436?s=460&u=3fe614e09a9f62c607788347afda48c129750cac&v=4",
         name: "Abner Pena de Souza",
@@ -25,19 +26,19 @@ server.get("/", function(req, res){
         office: "Web Developer Enthusiast",
         links: [
             { name: "Github", url: "https://github.com/abnerpsouza99" },
-            { name: "LinkedIn", url: "https://www.linkedin.com/in/abnerpenadesouza/"}
+            { name: "LinkedIn", url: "https://www.linkedin.com/in/abnerpenadesouza/" }
         ]
     }
 
 
-    return res.render("about", {about})
+    return res.render("about", { about })
 })
 
-server.get("/classes", function(req, res){
-    return res.render("classes", { items: videos})
+server.get("/classes", function (req, res) {
+    return res.render("classes", { items: videos })
 })
 
-server.get("/contents", function(req, res){
+server.get("/contents", function (req, res) {
 
     let contents = [
         {
@@ -64,22 +65,36 @@ server.get("/contents", function(req, res){
     ]
 
 
-    return res.render("contents", {contents: contents})
+    return res.render("contents", { contents: contents })
 })
 
-server.get("/aboutRocketseat", function(req, res){
+server.get("/aboutRocketseat", function (req, res) {
     return res.render("aboutRocketseat")
 })
 
-server.get("/not-found", function(req, res){
+server.get("/not-found", function (req, res) {
     return res.render("not-found")
 })
 
-server.use(function(req, res) {
+server.get("/video", function (req, res) {
+    const id = req.query.id
+
+    const video = videos.find(function (video) {
+        return video.id == id
+    })
+
+    if (!video) {
+        res.send("Video not found!")
+    }
+
+    return res.render("video", { item: video })
+})
+
+server.use(function (req, res) {
     res.status(404).render("not-found");
 });
 
 // Comand to turn-on server
-server.listen(5000, function(){
+server.listen(5000, function () {
     console.log("Server is running!")
 })
