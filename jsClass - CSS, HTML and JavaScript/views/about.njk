@@ -1,0 +1,31 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<div id="wrapper">
+    <img src="https://avatars1.githubusercontent.com/u/63468436?s=460&u=3fe614e09a9f62c607788347afda48c129750cac&v=4"
+        alt="Abner Pena de Souza">
+    <h1>{{about.name}}</h1>
+    <div>
+        <div id="box-1">
+            <h2>{{about.role}}
+            </h2>
+        </div>
+        <div id="box-1">
+            <h2>{{about.school}}
+            </h2>
+        </div>
+    </div>
+
+    <!-- For open the new tab when the user click, use target -->
+    <p>{{about.office}}</p>
+</div>
+
+<div id="links-footer" class="links">
+    {% for link in about.links %}
+        <a href="{{link.url}}" target="_blank">{{link.name}}</a>
+    {% endfor %}
+    
+</div>
+
+{% endblock content%}

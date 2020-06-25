@@ -315,6 +315,11 @@ iframe {
     top: 5%;
 }
 
+.card {
+    display: grid;
+    align-items: center;
+}
+
 .cardsContents {
     max-width: 1000px;
     margin: 0 auto;
@@ -327,30 +332,44 @@ iframe {
     border: 1px solid var(--color-green);
     border-radius: 10px;
     padding: 10px;
+    display: grid;
+    align-items: center;
 }
 
 .cardContent .card-content-description {
     margin-top: 10px;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     border-bottom: 1px solid var(--color-green);
 }
 
 .cardContent-info {
     margin-top: 20px;
     text-align: center;
-    display: grid;
     align-items: center;
+    display: grid;
     grid-template-columns: 1fr 1fr;
 
 }
 
 .cardContent-info p {
     text-align: left;
+    align-items: center;
 }
 
 .cardContent-info .cardContent-price {
     text-align: right;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 60px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
 }
 
 

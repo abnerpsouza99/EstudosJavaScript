@@ -1,0 +1,56 @@
+{% extends "layout.njk" %}
+
+{% block title %}
+    <!-- The tag title in head modify the name of page in the navegator -->
+    <title>Contents</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock title %}
+
+{% block content %}
+    <div id="wrapper">
+        <h1>Contents</h1>
+
+    </div>
+
+    <section class="cardsContents">
+
+        {% for content in contents %}
+            <div class="cardContent" id="{{content.id}}">
+                <div class="card-img-container">
+                    <img src="{{content.image}}" alt="">
+                </div>
+                <div class="card-content-description">
+                    <p>{{content.title}}</p>
+                </div>
+                <div class="cardContent-info">
+                    <p>{{content.modules}}</p>
+                    <p class="cardContent-price">{{content.price}}</p>
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </section>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="gridModalIcons">
+                <a class="close-modal">
+                    <i class="material-icons">close</i>
+                </a>
+                <a class="maximize-modal">
+                    <i class="material-icons">aspect_ratio</i>
+                </a>
+            </div>
+
+            <div class="modal-content">
+                <!-- We use the "iframe" to collect the extern content in our html -->
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+
+{% endblock content %}
